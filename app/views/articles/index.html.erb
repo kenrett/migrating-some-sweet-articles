@@ -1,0 +1,8 @@
+<% @categories.each do |cat_name| %>
+  <h1><%= cat_name.name %></h1>
+  <% @articles.each do |article| %>
+    <%= link_to article.title, category_article_path(cat_name.id, article.id) %>
+    <br>
+  <% end %>
+  <br>
+<% end %>
